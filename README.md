@@ -6,6 +6,10 @@ Autocomplete, guides on hover and type definitions are available for the configs
 
 ## Installation
 
+```bash
+npm install usescrollsmoother
+```
+
 Make sure you have club GSAP (shockingly or business) installed. You can install it using npm (required):
 
 ```bash
