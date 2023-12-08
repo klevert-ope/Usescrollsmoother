@@ -1,0 +1,30 @@
+{
+  "name": "usescrollsmoother",
+  "version": "1.0.0",
+  "description": "A custom React hook for achieving smooth scrolling behavior using GSAP ScrollSmoother.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klevert-ope/Usescrollsmoother.git"
+  },
+  "keywords": [
+    "gsap",
+    "useScrollSmoother",
+    "gsap",
+    "premium"
+  ],
+  "author": "klevert opee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/klevert-ope/Usescrollsmoother/issues"
+  },
+  "homepage": "https://github.com/klevert-ope/Usescrollsmoother#readme",
+  "dependencies": {
+    "gsap": "npm:@gsap/shockingly@^3.12.3",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0"
+  }
+}
