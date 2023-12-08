@@ -7,7 +7,7 @@ Autocomplete, guides on hover and type definitions are available for the configs
 ## Installation
 
 ```bash
-npm install usescrollsmoother
+npm install use-scrollsmoother
 ```
 
 Make sure you have club GSAP (shockingly or business) installed. You can install it using npm (required):
@@ -27,7 +27,7 @@ npm install prop-types
 ### Importing the Hook
 
 ```javascript
-import { useScrollSmoother } from 'usescrollsmoother';
+import { useScrollSmoother } from 'use-scrollsmoother';
 ```
 
 ### Basic Usage
