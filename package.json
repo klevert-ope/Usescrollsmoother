@@ -14,7 +14,8 @@
     "gsap",
     "useScrollSmoother",
     "gsap",
-    "premium"
+    "premium",
+    "@gsap/shockingly"
   ],
   "author": "klevert opee",
   "license": "ISC",
