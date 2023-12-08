@@ -9,11 +9,7 @@ Autocomplete, guides on hover and type definitions are available for the configs
 Make sure you have club GSAP (shockingly or business) installed. You can install it using npm (required):
 
 ```bash
-npm install gsap@npm:@gsap/shockingly 
-or
-npm install gsap@npm:@gsap/business
-or
-npm install ./gsap-bonus.tgz
+npm install gsap@npm:@gsap/shockingly
 ```
 
 Install the prop types, so you can have type definitions (required):
