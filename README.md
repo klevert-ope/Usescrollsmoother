@@ -10,13 +10,13 @@ Autocomplete, guides on hover and type definitions are available for the configs
 npm install use-scrollsmoother
 ```
 
-Make sure you have club GSAP (shockingly or business) installed. You can install it using npm (required):
+Make sure you have club GSAP (shockingly or business) installed. You can install it using npm (required dependency):
 
 ```bash
 npm install gsap@npm:@gsap/shockingly
 ```
 
-Install the prop types, so you can have type definitions (required):
+Install the prop types, so you can have type definitions (required devDependency):
 
 ```bash
 npm install prop-types
@@ -67,28 +67,6 @@ const { smoothWrapperRef, smoothContentRef } = useScrollSmoother({
     onStop: () => {}, // Function to call when smooth scrolling comes to a stop
   },
 });
-```
-
-## PropTypes
-
-```javascript
-useScrollSmoother.propTypes = {
-  props: PropTypes.shape({
-    config: PropTypes.shape({
-      smooth: PropTypes.number,
-      smoothTouch: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
-      normalizeScroll: PropTypes.bool,
-      ignoreMobileResize: PropTypes.bool,
-      effects: PropTypes.oneOfType([PropTypes.string, PropTypes.bool, PropTypes.array]),
-      effectsPrefix: PropTypes.string,
-      effectsPadding: PropTypes.number,
-      ease: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-      onUpdate: PropTypes.func,
-      onFocusIn: PropTypes.func,
-      onStop: PropTypes.func,
-    }),
-  }),
-};
 ```
 
 ## Notes
