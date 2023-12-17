@@ -1,2 +1,9 @@
 .idea
 gsap-bonus.tgz
+scroll.d.ts
+scroll.js
+scroll.js.map
+scroll.mjs
+scroll.mjs.map
+.npmignore
+package-lock.json
