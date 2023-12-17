@@ -1,8 +1,10 @@
 {
   "name": "use-scrollsmoother",
-  "version": "1.0.6",
+  "version": "1.1.5",
   "description": "A custom React hook for achieving smooth scrolling behavior using GSAP ScrollSmoother.",
-  "main": "dist/index.js",
+  "main": "scroll.js",
+  "module": "scroll.mjs",
+  "typings": "scroll.d.ts",
   "type": "module",
   "scripts": {
     "build": "rollup -c",
@@ -16,7 +18,7 @@
     "gsap",
     "useScrollSmoother",
     "gsap",
-    "premium",
+    "gsappremium",
     "@gsap/shockingly"
   ],
   "author": "klevert opee",
@@ -26,17 +28,16 @@
   },
   "homepage": "https://github.com/klevert-ope/Usescrollsmoother#readme",
   "dependencies": {
-    "gsap": "^3.12.3",
-    "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "gsap": "./gsap-bonus.tgz",
+    "react": "^18.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.5",
-    "@babel/preset-react": "^7.23.3",
-    "@rollup/plugin-babel": "^6.0.4",
-    "@rollup/plugin-commonjs": "^25.0.7",
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "rollup": "^4.7.0"
+    "@types/gsap": "^3.0.0",
+    "@types/react": "^18.2.45",
+    "esbuild": "^0.19.9",
+    "rollup": "^4.9.1",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-esbuild": "^6.1.0",
+    "typescript": "^5.3.3"
   }
 }

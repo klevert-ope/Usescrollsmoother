@@ -1,4 +1,6 @@
-hook
+src
 node_modules
 rollup.config.js
 .idea
+tsconfig.json
+gsap-bonus.tgz

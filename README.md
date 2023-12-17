@@ -16,26 +16,29 @@ Make sure you have club GSAP (shockingly or business) installed. You can install
 npm install gsap@npm:@gsap/shockingly
 ```
 
-Install the prop types, so you can have type definitions (required devDependency):
-
-```bash
-npm install prop-types
-```
-
 ## Usage
-
-### Importing the Hook
 
 ```javascript
 import { useScrollSmoother } from 'use-scrollsmoother';
-```
 
-### Basic Usage
-This will use the default configurations
-
-```javascript
 function YourApp() {
-  const { smoothWrapperRef, smoothContentRef } = useScrollSmoother();
+  const { smoothWrapperRef, smoothContentRef } = useScrollSmoother({
+	  config: {
+		  smooth: 1, // Time (in seconds) to catch up to the native scroll position
+		  smoothTouch: false, // Enable scroll smoothing on touch devices
+		  normalizeScroll: false, // Force scrolling on the JavaScript thread
+		  snormalizescroll: false, // Force scrolling on the JavaScript thread
+		  ignoreMobileResize: false, // Avoid triggering ScrollTrigger.refresh() on mobile resize
+		  signoremobileresize: false, // Avoid triggering ScrollTrigger.refresh() on mobile resize
+		  effects: false, // Apply effects based on data-speed and data-lag attributes
+		  effectsPrefix: 'scroll-', // Custom prefix for effects data attributes
+		  effectsPadding: 0, // Expand effects application to a specified number of pixels
+		  ease: 'expo', // Easing function for smooth scrolling
+		  onUpdate: () => {}, // Function to call after each smooth scroll update
+		  onFocusIn: () => true, // Function to call when a new element receives focus
+		  onStop: () => {}, // Function to call when smooth scrolling comes to a stop
+	  },
+  });
 
   return (
     <div ref={smoothWrapperRef}>
@@ -47,31 +50,10 @@ function YourApp() {
 }
 ```
 
-### Configuration
-
-You can customize the behavior by passing a configuration object to the hook:
-
-```javascript
-const { smoothWrapperRef, smoothContentRef } = useScrollSmoother({
-  config: {
-    smooth: 1, // Time (in seconds) to catch up to the native scroll position
-    smoothTouch: false, // Enable scroll smoothing on touch devices
-    normalizeScroll: false, // Force scrolling on the JavaScript thread
-    ignoreMobileResize: false, // Avoid triggering ScrollTrigger.refresh() on mobile resize
-    effects: false, // Apply effects based on data-speed and data-lag attributes
-    effectsPrefix: 'scroll-', // Custom prefix for effects data attributes
-    effectsPadding: 0, // Expand effects application to a specified number of pixels
-    ease: 'expo', // Easing function for smooth scrolling
-    onUpdate: () => {}, // Function to call after each smooth scroll update
-    onFocusIn: () => true, // Function to call when a new element receives focus
-    onStop: () => {}, // Function to call when smooth scrolling comes to a stop
-  },
-});
-```
-
 ## Notes
 
-- Ensure that the `smoothWrapperRef` and `smoothContentRef` are applied to the correct elements in your component.
-- Make sure GSAP and prop-types are properly installed and available in your project.
+- Ensure that the `smoothWrapperRef` and `smoothContentRef` are applied to the correct elements in your component and in the order as illustrated in the example above.
+- Make sure GSAP is properly installed and available in your project.
+- In my test usage snormalizescroll same as `ScrollTrigger.normalizeScroll()` and signoremobileresize same as `ScrollTrigger.ignoreMobileResize()` work better in mobile as compared to the normalizeScroll and ignoreMobileResize.
 
 Feel free to adjust the configuration options to suit your specific use case. For more details on GSAP and ScrollSmoother, refer to the [GSAP documentation](https://greensock.com/docs/).

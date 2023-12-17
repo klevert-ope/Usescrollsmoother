@@ -1,0 +1,12 @@
+{
+"compilerOptions": {
+"target": "esnext",
+  "allowSyntheticDefaultImports": true,
+  "baseUrl": ".",
+  "paths": {
+    "gsap": ["node_modules/gsap/dist/gsap.min.js"],
+    "gsap/ScrollSmoother": ["node_modules/gsap/dist/ScrollSmoother.min.js"],
+    "gsap/ScrollTrigger": ["node_modules/gsap/dist/ScrollTrigger.min.js"]
+  }
+}
+}
