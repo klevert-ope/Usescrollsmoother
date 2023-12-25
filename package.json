@@ -32,9 +32,8 @@
     "react": "^18.2.0"
   },
   "devDependencies": {
-    "@types/gsap": "^3.0.0",
     "@types/react": "^18.2.45",
-    "esbuild": "^0.19.9",
+    "esbuild": "^0.19.10",
     "rollup": "^4.9.1",
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-esbuild": "^6.1.0",
