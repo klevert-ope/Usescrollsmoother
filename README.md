@@ -1,5 +1,5 @@
 # ScrollSmoother React Hook
-[![Static Badge](https://img.shields.io/badge/npm-latest_v1.1.5-blue?logo=npm)](https://www.npmjs.com/package/use-scrollsmoother)
+[![Static Badge](https://img.shields.io/badge/npm-latest_v1.2.0-blue?logo=npm)](https://www.npmjs.com/package/use-scrollsmoother)
 ![Static Badge](https://img.shields.io/badge/license-ISC-red)
 
 The `useScrollSmoother` React Hook provides a simple way to manage smooth scrolling behavior using the ScrollSmoother plugin from the GreenSock Animation Platform (GSAP). This hook enhances the scrolling experience by smoothly catching up to the native scroll position, applying effects to specified elements, and providing various configuration options.

@@ -117,7 +117,7 @@ type StringArray = string[];
 /**
  * A src for managing smooth scrolling behavior using gsap ScrollSmoother.
  *
- * @param {UseScrollSmootherProps} props - The src's properties of ScrollSmoother.create({config});
+ * @param {UseScrollSmootherProps} props - The properties of ScrollSmoother.create({config});
  * @returns {UseScrollSmootherResult} - The result containing refs for smooth wrapper and content.
  */
 export function useScrollSmoother({ config }: UseScrollSmootherProps = {}): UseScrollSmootherResult {

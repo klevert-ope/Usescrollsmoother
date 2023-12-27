@@ -7,3 +7,4 @@ scroll.mjs
 scroll.mjs.map
 .npmignore
 package-lock.json
+node_modules
