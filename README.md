@@ -1,5 +1,5 @@
 # ScrollSmoother React Hook
-[![Static Badge](https://img.shields.io/badge/npm-latest_v1.2.0-blue?logo=npm)](https://www.npmjs.com/package/use-scrollsmoother)
+[![Static Badge](https://img.shields.io/badge/npm-latest_v1.2.6-blue?logo=npm)](https://www.npmjs.com/package/use-scrollsmoother)
 ![Static Badge](https://img.shields.io/badge/license-ISC-red)
 
 The `useScrollSmoother` React Hook provides a simple way to manage smooth scrolling behavior using the ScrollSmoother plugin from the GreenSock Animation Platform (GSAP). This hook enhances the scrolling experience by smoothly catching up to the native scroll position, applying effects to specified elements, and providing various configuration options.
@@ -12,10 +12,13 @@ Autocomplete, guides on hover and type definitions are available for the configs
 npm install use-scrollsmoother
 ```
 
-Make sure you have club GSAP (shockingly or business) installed. You can install it using npm (required dependency):
+Make sure you have club GSAP (shockingly or business), react and typescript installed.
+You can install it using npm (required dependency):
 
 ```bash
 npm install gsap@npm:@gsap/shockingly
+or
+npm install ./gsap-bonus.tgz
 ```
 
 ## Usage

@@ -12,27 +12,27 @@ type ScrollSmootherConfig = {
     /**
      * smooth - the time (in seconds) that it takes to "catch up" to the native scroll position.
      */
-    smooth: number;
+    smooth?: number;
     /**
      *  smoothTouch - by default, ScrollSmoother will NOT apply scroll smoothing on touch-only
      *   devices (like phones) because that typically feels odd to users when it disconnects from their finger's drag
      *   position, but you can force smoothing on touch devices too by setting smoothTouch: true (same as smooth value) or
      *   specify an amount like smoothTouch: 0.1 (in seconds).
      */
-    smoothTouch: boolean | number;
+    smoothTouch?: boolean | number;
     /**
      * if true, it forces scrolling to be done on the JavaScript thread,
      * ensuring it is synchronized, and the address bar doesn't show/hide on mobile devices.
      * it debounces because smooth scrolling makes that possible.
      */
-    normalizeScroll: boolean;
+    normalizeScroll?: boolean;
     /**
      * This is ScrollTrigger.normalizeScroll()
      * if true,
      * it forces scrolling to be done on the JavaScript thread,
      * ensuring it is synchronized, and the address bar doesn't show/hide on mobile devices.
      */
-    snormalizescroll: boolean;
+    snormalizescroll?: boolean;
     /**
      * if true,
      * vertical resizes (of 25% of the viewport height) on touch-only devices won't trigger a ScrollTrigger.refresh(),
@@ -41,7 +41,7 @@ type ScrollSmootherConfig = {
      * the start/end trigger positions may be inaccurate but in many scenarios
      * that are preferable to the visual jumps that occur due to the new start/end positions.
      */
-    ignoreMobileResize: boolean;
+    ignoreMobileResize?: boolean;
     /**
      * This is ScrollTrigger.ignoreMobileResize()
      * if true, vertical resizes (of 25% of the viewport height) on touch-only devices won't trigger a ScrollTrigger.refresh(),
@@ -50,7 +50,7 @@ type ScrollSmootherConfig = {
      * the start/end trigger positions may be inaccurate but in many scenarios
      * that are preferable to the visual jumps that occur due to the new start/end positions.
  */
-    signoremobileresize: boolean;
+    signoremobileresize?: boolean;
     /**
      * if true, ScrollSmoother will find all elements that have a data-speed
      * and/or data-lag attribute and apply those effects accordingly so that they move at the designated speed or delay,
@@ -61,43 +61,43 @@ type ScrollSmootherConfig = {
      * See that method's docs for more details about how effects work.
      * Note: effects should not be nested.
  */
-    effects: EffectsType;
+    effects?: EffectsType;
     /**
      * perhaps you're already using data-speed and/or data-lag for other purposes,
      * and you'd like to use a custom prefix for effects data attributes like effectsPrefix:
      * "scroll-" would resolve to data-scroll-speed and data-scroll-lag.
  */
-    effectsPrefix: string;
+    effectsPrefix?: string;
     /**
      * Normally, effects applied to a particular element begin as soon as the natural
      * position of the element enters the viewport and then end when the natural position leaves the viewport. However, in
      * some rare cases you may want to expand that, so you can pass a number (in pixels) as the effectsPadding.
  */
-    effectsPadding: number;
+    effectsPadding?: number;
     /**
      * the easing function to be used for smooth scrolling. Default is "expo".
  */
-    ease: string | (() => void);
+    ease?: string | (() => void);
     /**
      * a function to call after each time the SmoothScroller updates the position of the content.
  */
-    onUpdate: () => void;
+    onUpdate?: () => void;
     /**
      * a function to call when a new element receives focus,
      * and you can return false if you want ScrollSmoother to skip ensuring that the element is in the viewport
      * (overriding that default behavior).
  */
-    onFocusIn: () => void;
+    onFocusIn?: () => void;
     /**
      * a function to call when the smoothed scroll comes to a stop (catches up to the native scroll position).
  */
-    onStop: () => void;
+    onStop?: () => void;
 };
 type UseScrollSmootherProps = {
     /**
      * Configuration options for the ScrollSmoother.
      */
-    config?: ScrollSmootherConfig;
+    config?: Partial<ScrollSmootherConfig>;
 };
 type UseScrollSmootherResult = {
     smoothWrapperRef: React.RefObject<HTMLDivElement>;
